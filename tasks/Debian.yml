@@ -11,4 +11,20 @@
     state: started
     name: nginx.service
 
+- name: Template nginx.conf file to /etc/nginx/nginx.conf
+  ansible.builtin.template:
+    src: templates/etc/nginx/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Template nginx sites available default file to /etc/nginx/sites-available/default
+  ansible.builtin.template:
+    src: templates/etc/nginx/sites-available/default.j2
+    dest: /etc/nginx/sites/sites-available/default
+    owner: root
+    group: root
+    mode: '0644'
+
 ...
