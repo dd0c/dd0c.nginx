@@ -1,2 +1,2 @@
-# dd0c.nginx
+# nginx
 Ansible role for installing NginX for web or reverse proxy service.
